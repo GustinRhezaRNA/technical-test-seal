@@ -1,4 +1,5 @@
-import Image from "next/image"
+'use client'
+
 import Carousel from "./_components/carousel"
 import Popular from "./_components/popular"
 import Recommendation from "./_components/recomendation"

@@ -15,7 +15,7 @@ const Navigation = () => {
                             alt="Berita Kini Logo"
                             width={40}
                             height={40}
-                            className="w-10 h-10 "
+                            className="w-7 h-7 "
                         />
                         <span className="text-xl font-semibold text-gray-900">Berita Kini</span>
                     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Send, Youtube, Instagram, Facebook } from 'lucide-react'
+import Image from 'next/image'
 
 const index = () => {
   return (
@@ -10,9 +11,13 @@ const index = () => {
           {/* Logo and Copyright */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-blue-500 rounded transform rotate-45 flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-sm transform -rotate-45"></div>
-              </div>
+              <Image
+                src="/assets/logo-berita.png"
+                alt="Berita Kini Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10 "
+              />
               <span className="text-xl font-semibold">Berita Kini</span>
             </div>
             <p className="text-sm text-gray-300">© 2023 Berita Kini. All Rights Reserved.</p>
@@ -98,10 +103,10 @@ const index = () => {
               <input
                 type="email"
                 placeholder="Masukan email"
-                className="flex-1 px-3 py-2 bg-slate-600 border border-slate-500 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                className="flex-1 px-3 py-2 bg-white border border-slate-500 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
               />
               <button className="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-r-lg">
-                <Send className="w-4 h-4" />
+                <Send className="w-4 h-4" />  
               </button>
             </div>
           </div>
