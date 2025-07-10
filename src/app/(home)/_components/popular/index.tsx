@@ -3,34 +3,6 @@ import { Dot } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 
-// const dummyArticles = [
-//     {
-//         id: 1,
-//         title: "Kenapa Eks Jenderal Kritik Cara IDF Bebaskan 4 Sandera Hamas?",
-//         category: "Politik",
-//         date: "22 Jan 2024",
-//         image: "/images/popular-news.png",
-//         rank: 1
-//     },
-//     {
-//         id: 2,
-//         title: "Daftar 6 Lahan Tambang Jatah Ormas Agama, NU Dapat Bekas Grup Bakrie",
-//         category: "Nasional",
-//         date: "22 Jan 2024",
-//         image: "/images/popular-news.png",
-//         rank: 2
-//     },
-//     {
-//         id: 3,
-//         title: "Kementerian BUMN Mulai Uji Coba Pegawai Kerja 4 Hari Sepekan",
-//         category: "Nasional",
-//         date: "22 Jan 2024",
-//         image: "/images/popular-news.png",
-//         rank: 3
-//     }
-// ]
-
-
 const Popular = () => {
 
     const { data: news, isLoading, isError } = useNews();
@@ -58,20 +30,27 @@ const Popular = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {popularArticles.map((n, index) => (
-                    <div key={index} className="flex space-x-4 bg-white border border-gray-200 rounded-lg p-4">
-                        <div className="flex-shrink-0">
+                    <div key={index} className="flex space-x-4  bg-white rounded-lg p-4 min-h-[120px] items-center">
+                        {/* <div className="flex-shrink-0">
                             <div className="w-8 h-8 bg-gray-800 text-white rounded-full flex items-center justify-center text-sm font-bold">
                                 {index + 1}
                             </div>
-                        </div>
-                        <div className="flex-1">
+                        </div> */}
+                        <div className="flex-shrink-0 relative">
                             <Image
                                 src={n.thumbnail}
                                 alt="News thumbnail"
                                 width={100}
-                                height={60}
-                                className="w-full h-16 object-cover rounded mb-3"
+                                height={100}
+                                className="w-28 h-24 object-cover rounded"
                             />
+                            <div className="absolute -top-3 -left-3">
+                                <span className="inline-flex items-center rounded-full px-2.5 py-1 bg-slate-800  text-xs font-medium text-white shadow-sm">
+                                    {index + 1}
+                                </span>
+                            </div>
+                        </div>
+                        <div className="flex-1 ml-4">
                             <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2">
                                 {n.title}
                             </h3>

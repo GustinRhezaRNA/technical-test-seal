@@ -47,7 +47,7 @@ const Recommendation = () => {
                     <input
                         type="text"
                         placeholder="Cari disini..."
-                        className="pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-md pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                     <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                 </div>
@@ -60,23 +60,22 @@ const Recommendation = () => {
                         href={n.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow block"
+                        className="bg-white rounded-lg overflow-hidden hover:shadow-md transition-shadow block"
                     >
                         <Image
                             src={n.thumbnail}
                             alt="Article thumbnail"
                             width={300}
                             height={200}
-                            className="w-full h-40 object-cover"
+                            className="w-full h-40 object-cover rounded-t-lg rounded-b-lg"
                         />
                         <div className="p-4">
                             <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2">
                                 {n.title}
                             </h3>
                             <div className="flex items-center space-x-2 text-xs text-gray-500">
-                                <span className="inline text-blue-400 m-0 font-semibold">Nasional</span>
-                                <Dot className="text-center text-slate-300" />
-                                <span>{new Date(n.pubDate).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                                <span className='inline text-blue-400 m-0 font-semibold'>Nasional </span>
+                                <Dot className='text-center text-slate-300' /> {new Date(n.pubDate).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}
                             </div>
                         </div>
                     </a>
@@ -87,7 +86,7 @@ const Recommendation = () => {
             {/* Pagination */}
             <div className="flex items-center justify-between mt-8">
                 <p className="text-sm text-gray-600">
-                    Menampilkan {indexOfFirstItem + 1} – {Math.min(indexOfLastItem, news.length)} dari {news.length} berita
+                    Showing {indexOfFirstItem + 1} to {Math.min(indexOfLastItem, news.length)} of {news.length} results
                 </p>
 
                 <div className="flex items-center space-x-2">

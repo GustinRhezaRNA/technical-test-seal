@@ -25,9 +25,15 @@ const index = () => {
             <div>
               <h4 className="font-semibold mb-3">Ikuti Kami</h4>
               <div className="flex space-x-3">
-                <Youtube className="w-5 h-5 text-gray-300 hover:text-white cursor-pointer" />
-                <Instagram className="w-5 h-5 text-gray-300 hover:text-white cursor-pointer" />
-                <Facebook className="w-5 h-5 text-gray-300 hover:text-white cursor-pointer" />
+                <div className="bg-white rounded-sm p-1">
+                  <Youtube className="w-5 h-5 text-slate-700 hover:text-white cursor-pointer " />
+                </div>
+                <div className="bg-white rounded-sm p-1">
+                  <Instagram className="w-5 h-5 text-slate-700 hover:text-white cursor-pointer bg-white " />
+                </div>
+                <div className="bg-white rounded-sm p-1">
+                  <Facebook className="w-5 h-5 text-slate-700 hover:text-white cursor-pointer bg-white " />
+                </div>
               </div>
             </div>
           </div>
@@ -101,12 +107,12 @@ const index = () => {
             <h4 className="font-semibold mb-4">Berlangganan Berita Terbaru</h4>
             <div className="flex">
               <input
-                type="email"
-                placeholder="Masukan email"
-                className="flex-1 px-3 py-2 bg-white border border-slate-500 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+              type="email"
+              placeholder="Masukan email"
+              className="flex-1 px-3 py-2 bg-white border border-slate-500 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm placeholder:text-gray-400"
               />
               <button className="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-r-lg">
-                <Send className="w-4 h-4" />  
+              <Send className="w-4 h-4" />
               </button>
             </div>
           </div>
